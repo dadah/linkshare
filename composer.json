@@ -4,7 +4,7 @@
     "require": {
         "guzzlehttp/guzzle": "~5.0",
         "guzzlehttp/guzzle-services": "0.4.*",
-        "nmrkt/guzzle5-oauth2-subscriber": "dev-master"
+        "qbnk/guzzle5-oauth2-subscriber": "dev-master"
 
     },
     "require-dev": {
