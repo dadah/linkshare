@@ -22,7 +22,7 @@
         "psr-0": {
             "Nmrkt\\Linkshare": "src/",
             "Nmrkt\\Tests": "tests/",
-            "Nmrkt\\GuzzleOAuth2": "vendor/nmrkt/guzzle5-oauth2-subscriber/src/"
+            "QBNK\\GuzzleOAuth2": "vendor/qbnk/guzzle5-oauth2-subscriber/src/"
         }
     }
 }

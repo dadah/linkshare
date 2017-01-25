@@ -10,8 +10,8 @@ namespace Nmrkt\Linkshare;
 
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Event\SubscriberInterface;
-use Nmrkt\GuzzleOAuth2\GrantType\ClientCredentials;
-use Nmrkt\GuzzleOAuth2\OAuth2Subscriber;
+use QBNK\GuzzleOAuth2\GrantType\ClientCredentials;
+use QBNK\GuzzleOAuth2\OAuth2Subscriber;
 
 class Client extends GuzzleClient
 {
@@ -98,7 +98,7 @@ class Client extends GuzzleClient
 
 	public function getClientCredentialsGrantType()
 	{
-		if (!is_a($this->oauth_grant_type, 'Nmrkt\GuzzleOAuth2\GrantType\ClientCredentials')) {
+		if (!is_a($this->oauth_grant_type, 'QBNK\GuzzleOAuth2\GrantType\ClientCredentials')) {
 			$oauth_client = $this->getOauth2Client();
 			$this->oauth_grant_type = new ClientCredentials($oauth_client, $this->oauth_config);
 		}
@@ -108,7 +108,7 @@ class Client extends GuzzleClient
 
 	public function getOauth2Subscriber()
 	{
-		if (!is_a($this->oauth_subscriber, 'Nmrkt\GuzzleOAuth2\OAuth2Subscriber')) {
+		if (!is_a($this->oauth_subscriber, 'QBNK\GuzzleOAuth2\OAuth2Subscriber')) {
 			$grant_type = $this->getClientCredentialsGrantType();
 			$oauth_subscriber = new OAuth2Subscriber($grant_type);
 		}
