@@ -65,11 +65,11 @@ class ClientTest extends ClientTestCase
 
         $before_subscibers = $this->linkshare_client->getEmitter()->listeners('before');
 
-        $this->assertTrue(is_a($before_subscibers[0][0], 'Nmrkt\GuzzleOAuth2\OAuth2Subscriber'));
+        $this->assertTrue(is_a($before_subscibers[0][0], 'QBNK\GuzzleOAuth2\OAuth2Subscriber'));
 
         $error_subscibers = $this->linkshare_client->getEmitter()->listeners('error');
 
-        $this->assertTrue(is_a($error_subscibers[0][0], 'Nmrkt\GuzzleOAuth2\OAuth2Subscriber'));
+        $this->assertTrue(is_a($error_subscibers[0][0], 'QBNK\GuzzleOAuth2\OAuth2Subscriber'));
 
     }
 
